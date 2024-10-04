@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header> <!-- listen to the featureSelected -->
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <app-recipe-list></app-recipe-list>
-      <app-shopping-list></app-shopping-list>
+    <div class="col-md-12"> <!--write code to determine which one should display in header.html and ts and app.ts-->
+      <app-recipe-list *ngIf="loadedFeature === 'recipe'"></app-recipe-list>
+      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { Recipe } from '../../recipe.model';
 
 @Component({
@@ -8,4 +8,15 @@ import { Recipe } from '../../recipe.model';
 })
 export class RecipeItemComponent {
   @Input() recipes: Recipe[] = []; //so can receive recipes array from parent component
+ @Output() recipeSelected = new EventEmitter<void>();
+
+  constructor() {}
+
+  ngOnInit() {
+
+  }
+
+  onSelected() {
+    this.recipeSelected.emit();
+  }
 }

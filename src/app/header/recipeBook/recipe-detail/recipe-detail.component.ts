@@ -5,6 +5,15 @@ import { Component } from "@angular/core";
   templateUrl: './recipe-detail.component.html',
   styleUrls: ['./recipe-detail.component.css']
 })
-  export class recipeDetailComponent {
+  export class recipeDetailComponent implements OnInit {
+    @Input() recipe: Recipe;
+
+    constructor() {
+
+    }
+
+    ngOnInit() {
+
+    }
 
 }

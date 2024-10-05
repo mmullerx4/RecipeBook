@@ -6,8 +6,8 @@ import { Recipe } from '../../recipe.model';
   templateUrl: './recipe-item.component.html',
   styleUrls: ['./recipe-item.component.css']
 })
-export class RecipeItemComponent {
-  @Input() recipes: Recipe[] = []; //so can receive recipes array from parent component
+export class RecipeItemComponent implements OnInit {
+  @Input() recipes: Recipe; //so can receive recipes array from parent component
  @Output() recipeSelected = new EventEmitter<void>();
 
   constructor() {}

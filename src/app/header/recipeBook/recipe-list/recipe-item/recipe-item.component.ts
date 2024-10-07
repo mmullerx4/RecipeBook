@@ -7,7 +7,7 @@ import { Recipe } from '../../recipe.model';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
-  @Input() recipes: Recipe; //so can receive recipes array from parent component
+  @Input() recipe: Recipe; //so can receive recipes array from parent component
  @Output() recipeSelected = new EventEmitter<void>();
 
   constructor() {}
